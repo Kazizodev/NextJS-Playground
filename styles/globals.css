@@ -7,7 +7,7 @@ body{
 }
 
 .rocks {
-    background-image: url('/rocks.jpg');
+    background-image: url('/rocksopt.webp');
     background-repeat: no-repeat;
     background-size: cover;
     filter: brightness(70%);
