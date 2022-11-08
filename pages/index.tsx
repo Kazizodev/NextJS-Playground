@@ -4,82 +4,92 @@ import Image from 'next/image'
 
 const Home: NextPage = () => {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center py-2">
+    <div className='flex h-screen flex-col overflow-hidden'>
       <Head>
-        <title>Create Next App</title>
+        <title>Cloning Cool Website</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
-          </a>
-        </h1>
+      {/* Header */}
+      <nav className='flex border-b-[1px] border-[rgb(255,255,255,0.1)] w-full text-white'>
 
-        <p className="mt-3 text-2xl">
-          Get started by editing{' '}
-          <code className="rounded-md bg-gray-100 p-3 font-mono text-lg">
-            pages/index.tsx
-          </code>
-        </p>
-
-        <div className="mt-6 flex max-w-4xl flex-wrap items-center justify-around sm:w-full">
-          <a
-            href="https://nextjs.org/docs"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and its API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+        <div className="p-[3rem_2rem] gap-[1rem] items-center basis-[calc(100%/3)]">
+          <svg className="w-8 h-8 cursor-pointer" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+          </svg>
         </div>
-      </main>
 
-      <footer className="flex h-24 w-full items-center justify-center border-t">
-        <a
-          className="flex items-center justify-center gap-2"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-        </a>
-      </footer>
-    </div>
+        <div className="p-[3rem_2rem] font-semibold flex justify-center items-center gap-[6rem] border-l-[1px] border-[rgb(255,255,255,0.1)] basis-[calc(100%/3)]">
+          <p className='uppercase cursor-pointer hover:underline underline-offset-4 decoration-[2px]'>About</p>
+          <p className='uppercase cursor-pointer hover:underline underline-offset-4 decoration-[2px]'>Work</p>
+        </div>
+
+        <div className="p-[3rem_2rem]  flex justify-center items-center gap-[3rem] border-l-[1px] border-[rgb(255,255,255,0.1)] flex-grow">
+
+          {/* Graduation */}
+          <svg className="w-6 h-6 cursor-pointer" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 14l9-5-9-5-9 5 9 5z" />
+            <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
+          </svg>
+
+
+          {/* Globe */}
+          <svg className="w-6 h-6 cursor-pointer" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+          </svg>
+
+          {/* Inbox */}
+          <svg className="w-6 h-6 cursor-pointer" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4" />
+          </svg>
+
+        </div>
+
+        <div className="p-[3rem_2rem] hover:bg-white hover:text-[#060B1B] transition-[background-color_color] duration-[.4s] font-semibold flex justify-center items-center gap-[1rem] border-l-[1px] border-[rgb(255,255,255,0.1)] flex-grow">
+          <p className='uppercase cursor-pointer'>Get in touch</p>
+        </div>
+
+      </nav >
+
+      {/* Grid */}
+      <div className='grid grid-cols-[2fr_1fr] grid-rows-[2fr_1fr] h-full'>
+
+        <div className='border-[rgb(255,255,255,0.1)] h-full rocks' />
+
+        <div className='border-l-[1px] text-[#747083] pl-[5.4rem] pr-[7rem] py-[5.4rem] flex items-end text-[18px] leading-[160%] font-semibold text-justify border-[rgb(255,255,255,0.1)] h-full'>
+          <p>A vintage website for an old school barbershop. After going to this shop a few times, I decided that I had to make a (re)design for their website.</p>
+        </div>
+
+        <div className='border-t-[1px] group cursor-pointer flex justify-between px-[5.5rem] items-center text-white border-[rgb(255,255,255,0.1)] h-full'>
+          <h2 className='uppercase group-hover:text-6xl text-5xl group-hover:w-[40%] transition-[font-size_width] duration-[.3s] font-black tracking-wider w-[30%]'>Recreation from scratch</h2>
+
+          <svg className="w-32 h-32 group-hover:rotate-45 transition-[transform] duration-[.35s]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+          </svg>
+        </div>
+
+        <div className='border-l-[1px] flex justify-between text-white border-t-[1px] border-[rgb(255,255,255,0.1)] h-full'>
+
+          {/* Left */}
+          <div className='h-full grow flex justify-center items-center border-r-[1px] border-[rgb(255,255,255,0.1)]'>
+            <svg className="w-32 h-32" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16l-4-4m0 0l4-4m-4 4h18" />
+            </svg>
+          </div>
+
+          {/* Right */}
+          <div className='h-full grow flex justify-center items-center'>
+            <svg className="w-32 h-32" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div >
   )
 }
 

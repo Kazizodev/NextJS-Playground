@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body{
+    background-color: #060B1B;
+}
+
+.rocks {
+    background-image: url('/rocks.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(70%);
+}
