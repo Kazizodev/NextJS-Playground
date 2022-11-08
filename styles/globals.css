@@ -6,9 +6,6 @@ body{
     background-color: #060B1B;
 }
 
-.rocks {
-    background-image: url('/rocksopt.webp');
-    background-repeat: no-repeat;
-    background-size: cover;
-    filter: brightness(70%);
+body:hover #trailer {
+    opacity: 1;
 }
